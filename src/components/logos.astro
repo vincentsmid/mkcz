@@ -1,16 +1,93 @@
 ---
-// @ts-ignore
-import { Icon } from "astro-icon";
+import { Picture } from "@astrojs/image/components";
+import CK from "assets/candykeys.png";
+import EloquentClicks from "assets/eloquent_clicks.png";
+import IBKaps from "assets/ib_kaps.png";
+import Kyo from "assets/kyo_industries.png";
+import MKEU from "assets/logo-mkeu.png";
+import NovelKeys from "assets/nove_keys.png";
 ---
 
 <div class="mt-24">
-  <h2 class="text-center text-slate-500">Works with your technologies</h2>
-  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
-    <Icon class="h-8 md:h-12" name="simple-icons:react" />
-    <Icon class="h-8 md:h-12" name="simple-icons:svelte" />
-    <Icon class="h-8 md:h-14" name="simple-icons:tailwindcss" />
-    <Icon class="h-8 md:h-16" name="simple-icons:alpinedotjs" />
-    <Icon class="h-8 md:h-12" name="simple-icons:vercel" />
-    <Icon class="h-8 md:h-12" name="simple-icons:astro" />
+  <h2 class="text-center text-2xl font-bold">Vendors who are supporting us throughout the journey.</h2>
+  <div class="flex gap-8 md:gap-20 items-center justify-center mb-24 flex-wrap">
+      <a
+        href="https://candykeys.com/?utm_source=mkcz"
+        target="_blank"
+        rel="noopener">
+        <Picture
+          src={CK}
+          alt="CandyKeys Logo"
+          widths={[100]}
+          sizes="100px"
+          loading="eager"
+          format="avif"
+        />
+    </a>
+    <a
+      href="https://www.eloquentclicks.com/?utm_source=mkcz"
+      target="_blank"
+      rel="noopener">
+      <Picture
+        src={EloquentClicks}
+        alt="Eloquent Clicks logo"
+        widths={[100]}
+        sizes="100px"
+        loading="eager"
+        format="avif"
+    />
+    </a>
+    <a
+      href="https://ibkaps.store/?utm_source=mkcz"
+      target="_blank"
+      rel="noopener">
+      <Picture
+        src={IBKaps}
+        alt="IBKaps Logo"
+        widths={[50]}
+        sizes="50px"
+        loading="eager"
+        format="avif"
+      />
+    </a>
+    <a
+      href="https://kyo.industries/?utm_source=mkcz"
+      target="_blank"
+      rel="noopener">
+      <Picture
+        src={Kyo}
+        alt="Kyo Industries Logo"
+        widths={[50]}
+        sizes="50px"
+        loading="eager"
+        format="avif"
+      />
+    </a>
+    <a
+      href="https://mykeyboard.eu/?utm_source=mkcz"
+      target="_blank"
+      rel="noopener">
+      <Picture
+        src={MKEU}
+        alt="MyKeyboard Logo"
+        widths={[130]}
+        sizes="130px"
+        loading="eager"
+        format="avif"
+      />
+    </a>
+    <a
+      href="https://novelkeys.com/?utm_source=mkcz"
+      target="_blank"
+      rel="noopener">
+      <Picture
+        src={NovelKeys}
+        alt="Novel Keys Logo"
+        widths={[130]}
+        sizes="130px"
+        loading="eager"
+        format="avif"
+      />
+    </a>
   </div>
 </div>

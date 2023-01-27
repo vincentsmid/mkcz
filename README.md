@@ -47,7 +47,7 @@ pnpm astro add
 pnpm astro --help
 ````
 
-## Project Structure
+## Contributing
 
 Inside of your Astro project, you'll see the following folders and files:
 
@@ -68,11 +68,3 @@ Inside of your Astro project, you'll see the following folders and files:
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
 Any static assets, like images, can be placed in the `public/` directory.
-
-## TailwindCSS
-
-TailwindCSS is already configured in this repo, so you can start using it without any installation.
-
-## Credits
-
-[Hero Illustration](https://www.figma.com/community/file/1108400791662599811) by [Streamline](https://www.streamlinehq.com/)

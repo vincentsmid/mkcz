@@ -1,34 +1,19 @@
 ---
+import { Picture } from "@astrojs/image/components";
 import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
+import Logo from "assets/logo.png";
+import { Astronav,MenuIcon,MenuItems } from "astro-navbar";
 import Dropdown from "./dropdown.astro";
-import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
-    title: "Features",
+    title: "Previous Meetups",
     path: "#",
     children: [
-      { title: "Action", path: "#" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
+      { title: "2020", path: "https://photos.google.com/share/AF1QipNg-DJ4T4SDf4BTHvhjnDVElLHxUcSLXDj2CSY3eVhGd1iQnK0TGXB_rxBqto1IEw?key=TVhsMkJyZnVRR3FTM3luWEVnS1NXTi1ab1JVNGF3" },
+      { title: "2022", path: "https://photos.app.goo.gl/EZwisbsBPUoG6d6F8" },
     ],
-  },
-  {
-    title: "Pricing",
-    path: "/pricing",
-  },
-  {
-    title: "About",
-    path: "/about",
-  },
-  {
-    title: "Blog",
-    path: "/blog",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
   },
 ];
 ---
@@ -36,16 +21,20 @@ const menuitems = [
 <Container>
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
-      <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
-          >
-        </a>
-        <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
+        <div class="flex w-full lg:w-auto items-center justify-between bg-black px-4 rounded-xl">
+          <a href="/">
+            <Picture
+              src={Logo}
+              alt="Eloquent Clicks logo"
+              widths={[64]}
+              sizes="64px"
+              loading="eager"
+              format="avif"></Picture>
+          </a>
+          <div class="block lg:hidden">
+            <MenuIcon class="w-4 h-4 text-white" />
+          </div>
         </div>
-      </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
@@ -73,15 +62,13 @@ const menuitems = [
           }
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
+          <Link href="#" size="md" block size="lg">Prague Meetup 2023 IC</Link>
         </div>
       </MenuItems>
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
+        <Link href="#" size="md">Prague Meetup 2023 IC</Link>
       </div>
     </div>
   </header>
